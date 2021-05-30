@@ -1,0 +1,151 @@
+.logo {
+    width: 100px;
+    height: 50px;
+    margin: 0 200px 0 0;
+    z-index: 2;
+}
+
+nav {
+    height: 90px;
+    width: 100%;
+    background: #ffa033;
+    position: fixed;
+}
+
+.nav_item {
+    margin: 0 70px 0 0;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .4s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav_item:hover {
+    border-bottom: 2px solid black;
+}
+
+.header_top {
+    right: 100px;
+    position: fixed;
+    top: 40px;
+    display: flex;
+}
+
+.logo_a {
+    color: black;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    left: 100px;
+    top: 25px;
+    transition: all .3s;
+}
+
+.white_sss {
+    color: white;
+}
+
+input#burger {
+    display: none;
+}
+
+@media(max-width:920px) {
+    .header_top {
+        flex: none;
+        display: block;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        background: #ffa033;
+        position: fixed;
+        justify-content: center;
+        top: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s;
+    }
+    .nav_item {
+        flex: none;
+        display: block;
+        color: black;
+        right: 0;
+        padding: 5px;
+        margin: 100px 0px;
+        position: relative;
+        top: 60px;
+        border-bottom: 1px solid transparent;
+        z-index: 2;
+        transition: all .3s;
+    }
+    .nav_item:hover {
+        border-bottom: 1px solid transparent;
+        color: white;
+    }
+    #burger:checked~.header_top {
+        max-height: 100%;
+        font-size: 100%;
+    }
+    label {
+        background: transparent;
+        height: 45px;
+        width: 50px;
+        position: absolute;
+        top: 20px;
+        right: 100px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    #burger:checked~.second {
+        transform: rotate(45deg)
+    }
+    #burger:checked~.third {
+        transform: rotate(-45deg)
+    }
+    #burger:checked~.first {
+        display: none;
+    }
+    #burger:checked~.fourth {
+        display: none;
+    }
+    .line {
+        height: 3px;
+        width: 50px;
+        background: white;
+        position: absolute;
+        right: 100px;
+        top: 30px;
+        transition: all .3s;
+        z-index: 2;
+    }
+    .second {
+        top: 40px;
+    }
+    .third {
+        top: 40px;
+    }
+    .fourth {
+        top: 50px;
+    }
+    .logo_a {
+        z-index: 3;
+    }
+}
+
+@media (max-width:530px) {
+    .logo_a {
+        left: 40px;
+        z-index: 3;
+    }
+    label {
+        right: 40px;
+    }
+    .line {
+        right: 40px;
+    }
+}
+@media (max-height:570px){
+    .nav_item{
+        margin: 80px 0;
+    }
+
+}
